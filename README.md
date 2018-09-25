@@ -1,1 +1,1 @@
-# dg_matola
+# Django Girls Blog 
