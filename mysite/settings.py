@@ -124,6 +124,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+LOGIN_REDIRECT_URL = '/'
 #dominio no PythonAnywhere
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
