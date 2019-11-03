@@ -7,7 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name="Titulo")
     slug = models.SlugField(unique=True, max_length=255)
     image = models.ImageField(default="default.png", verbose_name="Foto")
-    text = models.TextField(verbose_name="Postagem")
+    text = models.TextField(verbose_name="Post")
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     image = models.ImageField(upload_to='media')
