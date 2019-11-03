@@ -46,7 +46,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1SucT55wbLAe9t9u14g5G4jedIp" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="57" />
+    <option name="y" value="8" />
+    <option name="width" value="603" />
+    <option name="height" value="812" />
+  </component>
+  <component name="ProjectId" id="1T7fhQPNmogmgERYcMsG0OrqrT4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
