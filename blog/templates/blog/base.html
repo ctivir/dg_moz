@@ -2,34 +2,147 @@
 {% load staticfiles %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DG_Matola</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Django Girls Workshop Moz Blog</title>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	 <!-- Custom styles for this template -->
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}">
+  	<link rel="canonical" href="https://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/2017/10/31/heartbeats.html">
+  	<link rel="alternate" type="application/rss+xml" title="Django Girls Blog" href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}">
+
 </head>
 <body>
-    <div class="conteiner">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+	    <div class="container">
+	        <a class="navbar-brand" href="i#">Django Girls</a>
+	        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		        Menu
+		        <i class="fas fa-bars"></i>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarResponsive">
+		        <ul class="navbar-nav ml-auto">
+		            <li class="nav-item">
+			            <a class="nav-link" href="#">Home</a>
+		            </li>
+		            <li class="nav-item">
+			            <a class="nav-link" href="#">About</a>
+		            </li>
+                    <li class="nav-item">
+			            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+		            </li>
+		        </ul>
+	        </div>
+        </div>
+    </nav>
+
+  <!-- Page Header -->
+  	<header class="masthead" style="background-image: url('{% static 'img/bg-post.jpg' %}')">
+		<div class="overlay"></div>
+		<div class="container">
+	  		<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="site-heading">
+						<h1>Blog</h1>
+						<span class="subheading">Django Girls Workshop in Mozambique</span>
+					</div>
+				</div>
+			</div>
+		</div>
+  	</header>
+	<div class="overlay"></div>
+	<div class="container">
         <div class="page-header">
-            {%if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-            {% else %}
-                <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
-                <a href="{% url 'login' %}" class="btn btn-sm top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-            {% endif %}
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </div>
-        </div>
-    </div>
+			{%if user.is_authenticated %}
+				<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+				<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+				<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+			{% else %}
+				<a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+				<a href="{% url 'login' %}" class="btn btn-sm top-menu"><span class="glyphicon glyphicon-lock">LogOut</span></a>
+			{% endif %}
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+
+	  <!-- Custom scripts for this template  Footer -->
+	<script src="{% static 'js/clean-blog.min.js' %}"> </script>
+    <hr/>
+    <footer>
+	    <div class="container">
+		    <div class="row">
+		        <div class="col-lg-8 col-md-10 mx-auto">
+			        <ul class="list-inline text-center">
+			            <li class="list-inline-item">
+				            <a href="mailto:maputo@djangogirls.org">
+				                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+				            </a>
+			  			</li>
+						<li class="list-inline-item">
+							<a href="https://twitter.com/djangogirls">
+								<span class="fa-stack fa-lg">
+									<i class="fas fa-circle fa-stack-2x"></i>
+									<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+							  	</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.facebook.com/djangodirlsmaputo">
+								<span class="fa-stack fa-lg">
+									<i class="fas fa-circle fa-stack-2x"></i>
+									<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+							  	</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://github.com/djangogirls">
+								<span class="fa-stack fa-lg">
+									<i class="fas fa-circle fa-stack-2x"></i>
+									<i class="fab fa-github fa-stack-1x fa-inverse"></i>
+							  	</span>
+							</a>
+						</li>
+					</ul>
+					<p class="copyright text-muted">Copyright &copy DG-Moz 2019</p>
+	    		</div>
+	  		</div>
+		</div>
+	</footer>
+
+	<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></div>
+	<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'js/clean-blog.min.js' %}"></script>
+	<script src="{% static 'assets/scripts.js' %}"></script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  	  function gtag(){dataLayer.push(arguments);}
+		  	  	  gtag('js', new Date());
+		  	  	  gtag('config', 'UA-XXXXXXXXX-X');
+	</script>
+
 </body>
 </html>

@@ -36,6 +36,7 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now()
+            post.image = form.cleaned_data['image']
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -78,3 +79,6 @@ def add_comment_to_post(request, pk):
     else:
         form = CommentForm()
     return render(request, 'blog/add_comment_to_post.html', {'form': form})
+
+def contact(request):
+    return render(request, 'blog/contact.html')
