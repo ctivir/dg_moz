@@ -29,7 +29,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 	    <div class="container">
-	        <a class="navbar-brand" href="i#">Django Girls</a>
+	        <a class="navbar-brand" href="#">Django Girls</a>
 	        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		        Menu
 		        <i class="fas fa-bars"></i>
@@ -37,13 +37,16 @@
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 		        <ul class="navbar-nav ml-auto">
 		            <li class="nav-item">
-			            <a class="nav-link" href="#">Home</a>
+			            <a class="nav-link" href="{% url 'post_list' %}">Home</a>
 		            </li>
 		            <li class="nav-item">
-			            <a class="nav-link" href="#">About</a>
+			            <a class="nav-link" href="{% url 'post_list' %}">Sobre Nós</a>
+		            </li>
+					<li class="nav-item">
+			            <a class="nav-link" href="{% url 'post_list' %}">Eventos</a>
 		            </li>
                     <li class="nav-item">
-			            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+			            <a class="nav-link" href="{% url 'contact' %}">Entre em contacto</a>
 		            </li>
 		        </ul>
 	        </div>
@@ -51,14 +54,16 @@
     </nav>
 
   <!-- Page Header -->
-  	<header class="masthead" style="background-image: url('{% static 'img/bg-post.jpg' %}')">
+  	<header class="masthead" style="background-image: url('{% static 'img/bg-home.jpg' %}')">
 		<div class="overlay"></div>
 		<div class="container">
 	  		<div class="row">
 				<div class="col-lg-8 col-md-10 mx-auto">
 					<div class="site-heading">
-						<h1>Blog</h1>
-						<span class="subheading">Django Girls Workshop in Mozambique</span>
+						<span class="citations">< <span style="color:green">viver</span> é como andar de bicicleta:
+							é  preciso estar em constante movimento para manter o <span style="color:green">equilíbrio</span> /></span><br/>
+						<h4>Albert Einstein</h4>
+
 					</div>
 				</div>
 			</div>
@@ -66,7 +71,7 @@
   	</header>
 	<div class="overlay"></div>
 	<div class="container">
-        <div class="page-header">
+        <!--div class="page-header">
 			{%if user.is_authenticated %}
 				<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 				<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
@@ -75,7 +80,7 @@
 				<a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
 				<a href="{% url 'login' %}" class="btn btn-sm top-menu"><span class="glyphicon glyphicon-lock">LogOut</span></a>
 			{% endif %}
-		</div>
+		</div-->
 		<div class="row">
 			<div class="col-lg-8 col-md-10 mx-auto">
 				{% block content %}
