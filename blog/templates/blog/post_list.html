@@ -2,13 +2,17 @@
 
 {% block content %}
     {% for post in posts %}
-    <div class="post">
-        <div class="date">
-            <p>published: {{ post.published_date }}</p>
-        </div>
-        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-        <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
-    </div>
+    <article class="post-preview">
+        <a href="{% url 'post_detail' pk=post.pk %}">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <h3 class="post-subtitle">{{ post.text|truncatewords_html:30}}</h3>
+        </a>
+        <p class="post-meta">Posted by
+            {{ post.author }}
+            no dia {{ post.published_date }}
+         </p>
+            <!--<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>-->
+    </article>
+    <hr/>
     {% endfor %}
 {% endblock %}

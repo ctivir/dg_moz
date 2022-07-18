@@ -15,11 +15,11 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
-        <!--p>{{ post.image }}</p-->
+        <p><img src="{{ post.image.url }}"/></p>
     </div>
     <hr>
     {% for comment in post.comments.all %}
-<a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
     <div class="comment">
         <div class="date">{{ comment.created_date }}</div>
         <strong>{{ comment.author }}</strong>
