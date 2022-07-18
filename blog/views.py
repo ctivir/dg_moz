@@ -80,5 +80,6 @@ def add_comment_to_post(request, pk):
         form = CommentForm()
     return render(request, 'blog/add_comment_to_post.html', {'form': form})
 
+
 def contact(request):
     return render(request, 'blog/contact.html')
