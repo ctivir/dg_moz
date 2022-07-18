@@ -28,7 +28,7 @@ We highly recommend and only officially support the latest patch release of each
 
 - Install using pip...
 
- 1. pip install djangorestframework
+ 1. pip install django
 
 
 ### How to contribute
@@ -37,7 +37,9 @@ To contribute to this project you have to fork it and clone it.
 
 After cloning it, in the project directory, run:
 
- 1.  `./manage.py migrate` to appy all migrations.
+ 1.  `./manage.py makemigrations` to create new migrations based on the changes you have made to your models.
+ 
+ 3.  `./manage.py migrate` to appy all migrations.
 
  2.  `./manage.py runserver` to run the app in the development mode.
      Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
@@ -46,7 +48,7 @@ After cloning it, in the project directory, run:
 
 ### Useful resources
 
-- [Django Documentation](https://docs.djangoproject.com/en)
+- [Django Documentation](https://docs.djangoproject.com)
 
 ## Acknowledgments
 - [Cecilia Tivir](https://github.com/ctivir)
