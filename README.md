@@ -7,9 +7,11 @@ This project is based on the Django Girls Workshops in Mozambique.
  - [Table of contents](#table-of-contents)
  - [Overview](#overview)
     - [Built with](#built-with)
+      - [Requirements](#Requirements)
+      - [Installation](#Installation)
     - [How to contribute](#how-to-contribute)
     - [Useful resources](#useful-resources)
-  - [Acknowledgments](#acknowledgments)
+ - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -19,8 +21,8 @@ This project is based on the Django Girls Workshops in Mozambique.
 
 ### Requirements
 
-- Python (3.6, 3.7, 3.8, 3.9, 3.10)
-- Django (2.2, 3.0, 3.1, 3.2, 4.0)
+- Python (3.6, 3.7, 3.8, 3.9, 3.10, older)
+- Django (2.2, 3.0, 3.1, 3.2, 4.0, older)
 
 We highly recommend and only officially support the latest patch release of each Python and Django series.
 
@@ -28,25 +30,28 @@ We highly recommend and only officially support the latest patch release of each
 
 - Install using pip...
 
- 1. pip install django
+ 1. pip install -r requirements.txt
 
-
-### How to contribute
+## How to contribute
 
 To contribute to this project you have to fork it and clone it.
 
+`git clone https://github.com/ctivir/dg_moz.git` Clone project
+
 After cloning it, in the project directory, run:
 
- 1.  `./manage.py makemigrations` to create new migrations based on the changes you have made to your models.
- 
- 3.  `./manage.py migrate` to appy all migrations.
-
- 2.  `./manage.py runserver` to run the app in the development mode.
+ 1. `cd dg_moz` Get project folder
+ 2. `python3 -m venv env` create virtual env
+ 3. `source env/bin/activate` activate virtual env
+ 4. `./python manage.py createsuperuser` create superuser to have access to django admin
+ 5. `./manage.py makemigrations` create new migrations based on the changes you have made to your models.
+ 6. `./manage.py migrate` appy all migrations.
+ 7. `./manage.py runserver` to run the app in the development mode.
      Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
      The page will reload if you make edits.
 
-### Useful resources
+## Useful resources
 
 - [Django Documentation](https://docs.djangoproject.com)
 
