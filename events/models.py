@@ -7,7 +7,8 @@ class Event(models.Model):
     city = models.CharField(max_length=250)
     slug = models.SlugField(unique=True, max_length=255)
     event_date = models.DateTimeField(default=timezone.now)
-    image = models.CharField(max_length=250)
+    image = models.URLField(default="")
+    url = models.URLField(default="https://djangogirls.org/en/matola/")
     created_date = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=250)
 
