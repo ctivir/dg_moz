@@ -3,13 +3,14 @@
 
 {% block content %}
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{% static 'img/bg-home.jpg' %}')">
+<header class="masthead" style="background-image: url('{% static 'img/bg-home.jpg' %}')"
+        xmlns="http://www.w3.org/1999/html">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-					<h1>Eventos realizados</h1>
+                    <h1>Eventos realizados</h1>
                     <span></span>
                 </div>
             </div>
@@ -21,16 +22,14 @@
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
             {% for event in events %}
-            <article class="post-preview">
-                <a href="#">
-                    <h2 class="post-title">{{ event.title }}</h2>
-                    <!--h3 class="post-subtitle">{{ event.image}}</h3>-->
+            <div class="col-sm-4">
+                <a href="{{ event.url}}">
+                    <img src="{{ event.image}}" width="174px" />
+                    <h3 class="post-title">{{ event.title }}</h3>
                 </a>
-                <h3 class="post-meta">Realizado na cidade de
-                    {{ event.city }}
-                    no dia {{ event.event_date|date:"d M Y" }}
-                </h3>
-            </article>
+                <span>Local: {{ event.city }}<br/>
+                Data: {{ event.event_date|date:"d M Y" }}</span>
+            </div>
             {% endfor %}
         </div>
     </div>

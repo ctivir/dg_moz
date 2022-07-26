@@ -57,4 +57,5 @@ After cloning it, in the project directory, run:
 
 ## Acknowledgments
 - [Cecilia Tivir](https://github.com/ctivir)
+- [Euclésia Cádia](https://github.com/euclesiacadia)
 
