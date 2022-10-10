@@ -1,7 +1,7 @@
 
 
 
-# Django prject
+# [Django](https://docs.djangoproject.com) Project
 The aim is to list all Django Girls Workshops held in Mozambique 
 
 ## Table of contents
@@ -58,5 +58,7 @@ After cloning it, in the project directory, run:
 - [Django Documentation](https://docs.djangoproject.com)
 
 ## Acknowledgments
-- [Cecilia Tivir](https://github.com/ctivir)
+- [Cecilia](https://github.com/ctivir)
+- [Ivo](https://github.com/naftalivo)
+- [Euclesia](https://github.com/euclesiacadia)
 
