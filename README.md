@@ -2,9 +2,7 @@
 
 
 # Django prject
-## The aim is to list all Django Girls Workshops held in Mozambique 
-
-This project is based on the Django Girls Workshops in Mozambique.  
+The aim is to list all Django Girls Workshops held in Mozambique 
 
 ## Table of contents
 
